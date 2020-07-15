@@ -1,0 +1,111 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #F0C27B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4B1248, #F0C27B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4B1248, #F0C27B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;   
+}
+
+h1 {
+    background-color: #2980b9;
+    color: white;
+    margin: 0;
+    margin-bottom: 4%;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+div.main {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.task {
+    background-color: black;
+    /* height: 40px; */
+    line-height: 40px;
+    color: #666;
+} div.task:nth-child(2n) {
+    background-color: #f7f7f7;
+} div.task:hover span {
+    width: 40px;
+    opacity: 1.0;
+}
+
+span {
+    background-color: #e74c3c;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    width: 0;
+    display: inline-block;
+    transition: 0.2s linear;
+    opacity: 0;
+}
+
+input {
+    font-size: 18px;
+    color: #2980b9;
+    background-color: #f7f7f7;
+    width: 100%;
+    margin-bottom: 4%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;
+    border: 3px solid rgba(0, 0, 0, 0);
+} input:focus {
+    background-color: #fff;
+    border: 3px solid #2980b9;
+    outline: none;
+}
+
+#container {
+    background-color: #f7f7f7;
+    /* width: 360px; */
+    margin: 100px auto;
+    padding: 5%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.fa-plus {
+    float: right;
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+}
+
+
+.cards {
+    display: flex;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 3px 3px 12px 2px rgba(0, 0, 0, 0.6);
+    transition: 0.2s;
+  }
+  
+  .card:not(:first-child) {
+    margin-left: -2rem;
+  }
+  
+  .card:not(:last-child):hover,
+  .card:not(:last-child):focus-within {
+    transform: translateY(-1rem);
+  }
+  .card:not(:last-child):hover ~ .card,
+  .card:not(:last-child):focus-within ~ .card {
+    transform: translateX(2rem);
+  }
